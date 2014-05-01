@@ -32,7 +32,6 @@ set background=dark
 colors base16-eighties
 set guioptions+=mTLlRr
 set guioptions-=mTLlRr
-autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 set guifont=Envy\ Code\ R\ for\ Powerline\ 10
 
