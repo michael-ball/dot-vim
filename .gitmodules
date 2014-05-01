@@ -1,9 +1,6 @@
 [submodule ".vim/bundle/ag.vim"]
 	path = .vim/bundle/ag.vim
 	url = https://github.com/rking/ag.vim.git
-[submodule ".vim/bundle/base16-vim"]
-	path = .vim/bundle/base16-vim
-	url = https://github.com/chriskempson/base16-vim.git
 [submodule ".vim/bundle/ctrlp.vim"]
 	path = .vim/bundle/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
@@ -52,3 +49,6 @@
 [submodule ".vim/bundle/vim-plugin-minibufexpl"]
 	path = .vim/bundle/vim-plugin-minibufexpl
 	url = https://github.com/techlivezheng/vim-plugin-minibufexpl.git
+[submodule ".vim/bundle/base16-vim"]
+	path = .vim/bundle/base16-vim
+	url = https://github.com/chriskempson/base16-vim.git
