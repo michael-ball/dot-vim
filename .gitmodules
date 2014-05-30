@@ -55,3 +55,6 @@
 [submodule ".vim/bundle/vim-session"]
 	path = .vim/bundle/vim-session
 	url = git@github.com:xolox/vim-session.git
+[submodule ".vim/bundle/Align"]
+	path = .vim/bundle/Align
+	url = git@github.com:vim-scripts/Align.git
