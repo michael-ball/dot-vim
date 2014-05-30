@@ -32,7 +32,7 @@ set background=dark
 colors base16-eighties
 set guioptions+=mTLlRr
 set guioptions-=mTLlRr
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 set guifont=Envy\ Code\ R\ for\ Powerline\ 10
 
 let g:ConqueTerm_Color = 0
@@ -107,3 +107,6 @@ let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
 let g:indent_guides_start_level = 1
 let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'Tagbar']
+
+let g:session_autoload = 'yes'
+let g:session_autosave = 'no'
