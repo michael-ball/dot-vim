@@ -58,3 +58,6 @@
 [submodule ".vim/bundle/Align"]
 	path = .vim/bundle/Align
 	url = git@github.com:vim-scripts/Align.git
+[submodule ".vim/bundle/vim-hybrid"]
+	path = .vim/bundle/vim-hybrid
+	url = git@github.com:w0ng/vim-hybrid.git
