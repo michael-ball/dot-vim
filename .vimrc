@@ -1,4 +1,4 @@
-set shell=/bin/sh
+set shell=/bin/bash
 execute pathogen#infect()
 let mapleader = ","
 set rnu
@@ -75,6 +75,7 @@ let g:gitgutter_sign_added = '██'
 let g:gitgutter_sign_modified = '██'
 let g:gitgutter_sign_removed = '██'
 let g:gitgutter_sign_modified_removed = '██'
+let g:gitgutter_realtime = 0
 
 let g:tern_map_keys=1
 let tern_show_argument_hints = "on_hold"
