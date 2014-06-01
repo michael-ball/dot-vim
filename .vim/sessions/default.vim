@@ -1,6 +1,6 @@
 " ~/Development/dot-vim/.vim/sessions/default.vim:
 " Vim session script.
-" Created by session.vim 2.4.9 on 31 May 2014 at 14:17:21.
+" Created by session.vim 2.4.9 on 01 June 2014 at 19:21:52.
 " Open this file in Vim and run :source % to restore your session.
 
 set guioptions=agit
@@ -12,7 +12,7 @@ if exists('g:did_indent_on') != 1 | filetype indent on | endif
 if &background != 'dark'
 	set background=dark
 endif
-if !exists('g:colors_name') || g:colors_name != 'base16-eighties' | colorscheme base16-eighties | endif
+if !exists('g:colors_name') || g:colors_name != 'hybrid' | colorscheme hybrid | endif
 call setqflist([])
 let SessionLoad = 1
 if &cp | set nocp | endif
@@ -41,10 +41,10 @@ set nosplitright
 wincmd t
 set winheight=1 winwidth=1
 exe '1resize ' . ((&lines * 23 + 24) / 49)
-exe 'vert 1resize ' . ((&columns * 45 + 97) / 194)
+exe 'vert 1resize ' . ((&columns * 25 + 97) / 194)
 exe '2resize ' . ((&lines * 22 + 24) / 49)
-exe 'vert 2resize ' . ((&columns * 45 + 97) / 194)
-exe 'vert 3resize ' . ((&columns * 148 + 97) / 194)
+exe 'vert 2resize ' . ((&columns * 25 + 97) / 194)
+exe 'vert 3resize ' . ((&columns * 168 + 97) / 194)
 " argglobal
 enew
 " file NERD_tree_1
@@ -88,10 +88,10 @@ normal! 0
 wincmd w
 3wincmd w
 exe '1resize ' . ((&lines * 23 + 24) / 49)
-exe 'vert 1resize ' . ((&columns * 45 + 97) / 194)
+exe 'vert 1resize ' . ((&columns * 25 + 97) / 194)
 exe '2resize ' . ((&lines * 22 + 24) / 49)
-exe 'vert 2resize ' . ((&columns * 45 + 97) / 194)
-exe 'vert 3resize ' . ((&columns * 148 + 97) / 194)
+exe 'vert 2resize ' . ((&columns * 25 + 97) / 194)
+exe 'vert 3resize ' . ((&columns * 168 + 97) / 194)
 tabnext 1
 if exists('s:wipebuf')
 "   silent exe 'bwipe ' . s:wipebuf
@@ -120,7 +120,7 @@ if !getbufvar(s:bufnr_save, '&modified')
   endif
 endif
 execute "cd" fnameescape(s:cwd_save)
-1resize 23|vert 1resize 45|2resize 22|vert 2resize 45|3resize 46|vert 3resize 148|
+1resize 23|vert 1resize 25|2resize 22|vert 2resize 25|3resize 46|vert 3resize 168|
 tabnext 1
 3wincmd w
 if exists('s:wipebuf')
