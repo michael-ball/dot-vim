@@ -27,14 +27,12 @@ inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
 inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
   \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 
-let base16colorspace=256
+"let base16colorspace=256
 set background=dark
-colors base16-eighties
+colors hybrid
 set guioptions+=mTLlRr
 set guioptions-=mTLlRr
 set guifont=Envy\ Code\ R\ for\ Powerline\ 10
-
-let g:ConqueTerm_Color = 0
 
 nmap <C-V> "+gP
 imap <C-V> <ESC><C-V>i
