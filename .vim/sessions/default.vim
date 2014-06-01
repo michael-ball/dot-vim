@@ -1,6 +1,6 @@
 " ~/Development/dot-vim/.vim/sessions/default.vim:
 " Vim session script.
-" Created by session.vim 2.4.9 on 01 June 2014 at 19:21:52.
+" Created by session.vim 2.4.9 on 01 June 2014 at 19:50:29.
 " Open this file in Vim and run :source % to restore your session.
 
 set guioptions=agit
@@ -19,14 +19,14 @@ if &cp | set nocp | endif
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd ~/
+cd ~/Work/Development/simpalarm-frontend
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +1 .scratch
+badd +1 ~/.scratch
 silent! argdel *
-edit .scratch
+edit ~/.scratch
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
@@ -41,10 +41,10 @@ set nosplitright
 wincmd t
 set winheight=1 winwidth=1
 exe '1resize ' . ((&lines * 23 + 24) / 49)
-exe 'vert 1resize ' . ((&columns * 25 + 97) / 194)
+exe 'vert 1resize ' . ((&columns * 31 + 97) / 194)
 exe '2resize ' . ((&lines * 22 + 24) / 49)
-exe 'vert 2resize ' . ((&columns * 25 + 97) / 194)
-exe 'vert 3resize ' . ((&columns * 168 + 97) / 194)
+exe 'vert 2resize ' . ((&columns * 31 + 97) / 194)
+exe 'vert 3resize ' . ((&columns * 162 + 97) / 194)
 " argglobal
 enew
 " file NERD_tree_1
@@ -88,10 +88,10 @@ normal! 0
 wincmd w
 3wincmd w
 exe '1resize ' . ((&lines * 23 + 24) / 49)
-exe 'vert 1resize ' . ((&columns * 25 + 97) / 194)
+exe 'vert 1resize ' . ((&columns * 31 + 97) / 194)
 exe '2resize ' . ((&lines * 22 + 24) / 49)
-exe 'vert 2resize ' . ((&columns * 25 + 97) / 194)
-exe 'vert 3resize ' . ((&columns * 168 + 97) / 194)
+exe 'vert 2resize ' . ((&columns * 31 + 97) / 194)
+exe 'vert 3resize ' . ((&columns * 162 + 97) / 194)
 tabnext 1
 if exists('s:wipebuf')
 "   silent exe 'bwipe ' . s:wipebuf
@@ -112,7 +112,7 @@ tabnext 1
 1wincmd w
 let s:bufnr_save = bufnr("%")
 let s:cwd_save = getcwd()
-NERDTree ~/
+NERDTree ~/Work/Development/simpalarm-frontend
 if !getbufvar(s:bufnr_save, '&modified')
   let s:wipebuflines = getbufline(s:bufnr_save, 1, '$')
   if len(s:wipebuflines) <= 1 && empty(get(s:wipebuflines, 0, ''))
@@ -120,7 +120,7 @@ if !getbufvar(s:bufnr_save, '&modified')
   endif
 endif
 execute "cd" fnameescape(s:cwd_save)
-1resize 23|vert 1resize 25|2resize 22|vert 2resize 25|3resize 46|vert 3resize 168|
+1resize 23|vert 1resize 31|2resize 22|vert 2resize 31|3resize 46|vert 3resize 162|
 tabnext 1
 3wincmd w
 if exists('s:wipebuf')
