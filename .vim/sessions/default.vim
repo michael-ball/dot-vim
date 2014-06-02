@@ -1,6 +1,6 @@
 " ~/Development/dot-vim/.vim/sessions/default.vim:
 " Vim session script.
-" Created by session.vim 2.4.9 on 01 June 2014 at 19:50:29.
+" Created by session.vim 2.4.9 on 02 June 2014 at 09:58:51.
 " Open this file in Vim and run :source % to restore your session.
 
 set guioptions=agit
@@ -12,21 +12,21 @@ if exists('g:did_indent_on') != 1 | filetype indent on | endif
 if &background != 'dark'
 	set background=dark
 endif
-if !exists('g:colors_name') || g:colors_name != 'hybrid' | colorscheme hybrid | endif
+if !exists('g:colors_name') || g:colors_name != 'base16-default' | colorscheme base16-default | endif
 call setqflist([])
 let SessionLoad = 1
 if &cp | set nocp | endif
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd ~/Work/Development/simpalarm-frontend
+cd ~/
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +1 ~/.scratch
+badd +1 .scratch
 silent! argdel *
-edit ~/.scratch
+edit .scratch
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
@@ -40,14 +40,14 @@ set nosplitbelow
 set nosplitright
 wincmd t
 set winheight=1 winwidth=1
-exe '1resize ' . ((&lines * 23 + 24) / 49)
-exe 'vert 1resize ' . ((&columns * 31 + 97) / 194)
-exe '2resize ' . ((&lines * 22 + 24) / 49)
-exe 'vert 2resize ' . ((&columns * 31 + 97) / 194)
-exe 'vert 3resize ' . ((&columns * 162 + 97) / 194)
+exe '1resize ' . ((&lines * 29 + 30) / 61)
+exe 'vert 1resize ' . ((&columns * 43 + 136) / 273)
+exe '2resize ' . ((&lines * 28 + 30) / 61)
+exe 'vert 2resize ' . ((&columns * 43 + 136) / 273)
+exe 'vert 3resize ' . ((&columns * 229 + 136) / 273)
 " argglobal
 enew
-" file NERD_tree_1
+" file NERD_tree_2
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -79,7 +79,7 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 23) / 46)
+let s:l = 1 - ((0 * winheight(0) + 29) / 58)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -87,11 +87,11 @@ normal! zt
 normal! 0
 wincmd w
 3wincmd w
-exe '1resize ' . ((&lines * 23 + 24) / 49)
-exe 'vert 1resize ' . ((&columns * 31 + 97) / 194)
-exe '2resize ' . ((&lines * 22 + 24) / 49)
-exe 'vert 2resize ' . ((&columns * 31 + 97) / 194)
-exe 'vert 3resize ' . ((&columns * 162 + 97) / 194)
+exe '1resize ' . ((&lines * 29 + 30) / 61)
+exe 'vert 1resize ' . ((&columns * 43 + 136) / 273)
+exe '2resize ' . ((&lines * 28 + 30) / 61)
+exe 'vert 2resize ' . ((&columns * 43 + 136) / 273)
+exe 'vert 3resize ' . ((&columns * 229 + 136) / 273)
 tabnext 1
 if exists('s:wipebuf')
 "   silent exe 'bwipe ' . s:wipebuf
@@ -112,7 +112,7 @@ tabnext 1
 1wincmd w
 let s:bufnr_save = bufnr("%")
 let s:cwd_save = getcwd()
-NERDTree ~/Work/Development/simpalarm-frontend
+NERDTree ~/Sites/airbus-lgtest
 if !getbufvar(s:bufnr_save, '&modified')
   let s:wipebuflines = getbufline(s:bufnr_save, 1, '$')
   if len(s:wipebuflines) <= 1 && empty(get(s:wipebuflines, 0, ''))
@@ -120,7 +120,7 @@ if !getbufvar(s:bufnr_save, '&modified')
   endif
 endif
 execute "cd" fnameescape(s:cwd_save)
-1resize 23|vert 1resize 31|2resize 22|vert 2resize 31|3resize 46|vert 3resize 162|
+1resize 29|vert 1resize 43|2resize 28|vert 2resize 43|3resize 58|vert 3resize 229|
 tabnext 1
 3wincmd w
 if exists('s:wipebuf')
