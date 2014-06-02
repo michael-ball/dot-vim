@@ -108,3 +108,14 @@ let g:indent_guides_enable_on_vim_startup = 1
 let g:session_autoload = 'yes'
 let g:session_autosave = 'no'
 
+let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'dir', 'undo', 'line']
+let g:ctrlp_buftag_typess = {
+            \   'javascript': {
+            \     'bin': '/usr/bin/jsctags',
+            \     'args': '-f -',
+            \   },
+            \   'php': {
+            \     'cmd': '~/bin/phpctags',
+            \     'args': '-f -',
+            \   }
+            \}
