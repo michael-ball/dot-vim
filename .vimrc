@@ -74,7 +74,7 @@ let g:gitgutter_sign_modified = '██'
 let g:gitgutter_sign_removed = '██'
 let g:gitgutter_sign_modified_removed = '██'
 let g:gitgutter_realtime = 0
-
+let g:gitgutter_diff_args = '-w --ignore-blank-lines'
 let g:tern_map_keys=1
 let tern_show_argument_hints = "on_hold"
 let tern_show_signature_in_pum = 1
@@ -89,9 +89,9 @@ let g:easytags_languages = {
             \   },
             \   'php': {
             \     'cmd': '~/bin/phpctags',
-            \       'args': [],
+            \       'args': ['--memory=512M'],
             \       'fileoutput_opt': '-f',
-            \       'stdout_opt': '-f-',
+            \       'stdout_opt': '-f -',
             \       'recurse_flag': '-R'
             \   }
             \}
