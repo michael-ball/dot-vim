@@ -1,2 +1,2 @@
 **/*.lock
-sessions/default.vim
+.vim/sessions/default.vim
