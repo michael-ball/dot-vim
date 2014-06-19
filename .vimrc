@@ -1,5 +1,6 @@
 set shell=/bin/bash
-execute pathogen#infect()
+"execute pathogen#infect()
+call pathogen#runtime_append_all_bundles()
 let mapleader = ","
 set rnu
 set number
@@ -46,10 +47,6 @@ set completeopt+=menuone,preview
 
 let g:tagbar_phpctags_bin='~/bin/phpctags'
 let g:tagbar_phpctags_memory_limit = '512M'
-
-
-"gtags
-map <C-\> :Gtags -r<CR><CR>
 
 let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
