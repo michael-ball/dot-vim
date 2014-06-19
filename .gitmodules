@@ -73,3 +73,6 @@
 [submodule ".vim/bundle/vim-snippets"]
 	path = .vim/bundle/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
+[submodule ".vim/bundle/multiwindow-source-code-browsing.git"]
+	path = .vim/bundle/multiwindow-source-code-browsing.git
+	url = git@github.com:vim-scripts/multiwindow-source-code-browsing.git
