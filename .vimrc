@@ -1,6 +1,5 @@
 set shell=/bin/bash
-"execute pathogen#infect()
-call pathogen#incubate()
+execute pathogen#infect()
 let mapleader = ","
 set rnu
 set number
