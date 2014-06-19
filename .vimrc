@@ -1,6 +1,6 @@
 set shell=/bin/bash
 "execute pathogen#infect()
-call pathogen#runtime_append_all_bundles()
+call pathogen#incubate()
 let mapleader = ","
 set rnu
 set number
