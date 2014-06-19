@@ -20,6 +20,8 @@ set smartindent
 
 set completeopt=longest,menuone
 
+set sessionoptions+=resize
+
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
   \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
@@ -69,11 +71,12 @@ let g:miniBufExplorerAutoStart = 0
 map <silent> <F11>
 \    :call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")<CR>
 
-let g:gitgutter_sign_added = '██'
-let g:gitgutter_sign_modified = '██'
-let g:gitgutter_sign_removed = '██'
-let g:gitgutter_sign_modified_removed = '██'
+let g:gitgutter_sign_added = '█'
+let g:gitgutter_sign_modified = '█'
+let g:gitgutter_sign_removed = '█'
+let g:gitgutter_sign_modified_removed = '█'
 let g:gitgutter_realtime = 0
+"let g:gitgutter_enabled = 0
 let g:gitgutter_diff_args = '-w --ignore-blank-lines'
 let g:tern_map_keys=1
 let tern_show_argument_hints = "on_hold"
@@ -85,13 +88,13 @@ let g:easytags_languages = {
             \     'cmd': '/usr/bin/jsctags',
             \       'args': [],
             \       'fileoutput_opt': '-f',
-            \       'stdout_opt': '-f -',
+            \       'stdout_opt': '-f-',
             \   },
             \   'php': {
             \     'cmd': '~/bin/phpctags',
             \       'args': ['--memory=512M'],
             \       'fileoutput_opt': '-f',
-            \       'stdout_opt': '-f -',
+            \       'stdout_opt': '-f-',
             \       'recurse_flag': '-R'
             \   }
             \}
