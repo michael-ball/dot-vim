@@ -1,1 +1,0 @@
-.vim/bundle/multiwindow-source-code-browsing.git/ftplugin/gtags_mwin.vim
