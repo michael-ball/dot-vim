@@ -1,6 +1,6 @@
 " ~/Development/dot-vim/.vim/sessions/default.vim:
 " Vim session script.
-" Created by session.vim 2.4.9 on 02 June 2014 at 09:58:51.
+" Created by session.vim 2.4.9 on 11 June 2014 at 09:09:28.
 " Open this file in Vim and run :source % to restore your session.
 
 set guioptions=agit
@@ -30,21 +30,18 @@ edit .scratch
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
-1wincmd h
 wincmd _ | wincmd |
-split
-1wincmd k
+vsplit
+2wincmd h
 wincmd w
 wincmd w
 set nosplitbelow
 set nosplitright
 wincmd t
 set winheight=1 winwidth=1
-exe '1resize ' . ((&lines * 29 + 30) / 61)
-exe 'vert 1resize ' . ((&columns * 43 + 136) / 273)
-exe '2resize ' . ((&lines * 28 + 30) / 61)
-exe 'vert 2resize ' . ((&columns * 43 + 136) / 273)
-exe 'vert 3resize ' . ((&columns * 229 + 136) / 273)
+exe 'vert 1resize ' . ((&columns * 31 + 121) / 243)
+exe 'vert 2resize ' . ((&columns * 170 + 121) / 243)
+exe 'vert 3resize ' . ((&columns * 40 + 121) / 243)
 " argglobal
 enew
 " file NERD_tree_2
@@ -58,18 +55,6 @@ setlocal fdn=20
 setlocal nofen
 wincmd w
 " argglobal
-enew
-file __Tagbar__
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-wincmd w
-" argglobal
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -79,19 +64,29 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 29) / 58)
+let s:l = 3 - ((2 * winheight(0) + 22) / 45)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
-normal! 0
+3
+normal! 04|
 wincmd w
-3wincmd w
-exe '1resize ' . ((&lines * 29 + 30) / 61)
-exe 'vert 1resize ' . ((&columns * 43 + 136) / 273)
-exe '2resize ' . ((&lines * 28 + 30) / 61)
-exe 'vert 2resize ' . ((&columns * 43 + 136) / 273)
-exe 'vert 3resize ' . ((&columns * 229 + 136) / 273)
+" argglobal
+enew
+file __Tagbar__
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+wincmd w
+2wincmd w
+exe 'vert 1resize ' . ((&columns * 31 + 121) / 243)
+exe 'vert 2resize ' . ((&columns * 170 + 121) / 243)
+exe 'vert 3resize ' . ((&columns * 40 + 121) / 243)
 tabnext 1
 if exists('s:wipebuf')
 "   silent exe 'bwipe ' . s:wipebuf
@@ -112,7 +107,7 @@ tabnext 1
 1wincmd w
 let s:bufnr_save = bufnr("%")
 let s:cwd_save = getcwd()
-NERDTree ~/Sites/airbus-lgtest
+NERDTree ~/
 if !getbufvar(s:bufnr_save, '&modified')
   let s:wipebuflines = getbufline(s:bufnr_save, 1, '$')
   if len(s:wipebuflines) <= 1 && empty(get(s:wipebuflines, 0, ''))
@@ -120,9 +115,9 @@ if !getbufvar(s:bufnr_save, '&modified')
   endif
 endif
 execute "cd" fnameescape(s:cwd_save)
-1resize 29|vert 1resize 43|2resize 28|vert 2resize 43|3resize 58|vert 3resize 229|
+1resize 45|vert 1resize 31|2resize 45|vert 2resize 170|3resize 45|vert 3resize 40|
 tabnext 1
-3wincmd w
+2wincmd w
 if exists('s:wipebuf')
   if empty(bufname(s:wipebuf))
 if !getbufvar(s:wipebuf, '&modified')
