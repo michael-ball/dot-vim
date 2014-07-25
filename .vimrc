@@ -13,6 +13,7 @@ filetype plugin indent on
 set encoding=utf-8
 
 set et
+set cc=80
 set sw=4
 set smarttab
 set tags=./tags;,tags
@@ -118,3 +119,4 @@ let g:ctrlp_buftag_typess = {
             \     'args': '-f -',
             \   }
             \}
+inoremap {<CR> {<CR>}<C-o>O 
