@@ -73,3 +73,12 @@
 [submodule ".vim/bundle/vim-snippets"]
 	path = .vim/bundle/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
+[submodule ".vim/bundle/grunt.vim"]
+	path = .vim/bundle/grunt.vim
+	url = git@github.com:mklabs/grunt.vim.git
+[submodule ".vim/bundle/delimitMate.git"]
+	path = .vim/bundle/delimitMate.git
+	url = git@github.com:Raimondi/delimitMate.git
+[submodule ".vim/bundle/Align.git"]
+	path = .vim/bundle/Align.git
+	url = git@github.com:vim-scripts/Align.git

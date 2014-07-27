@@ -13,6 +13,7 @@ filetype plugin indent on
 set encoding=utf-8
 
 set et
+set cc=80
 set sw=4
 set smarttab
 set tags=./tags;,tags
@@ -101,7 +102,7 @@ let g:easytags_events = ['BufWritePost']
 
 let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
-let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'Tagbar']
+let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', '__Tagbar__']
 let g:indent_guides_enable_on_vim_startup = 1
 
 let g:session_autoload = 'yes'
@@ -118,3 +119,4 @@ let g:ctrlp_buftag_typess = {
             \     'args': '-f -',
             \   }
             \}
+inoremap {<CR> {<CR>}<C-o>O 
