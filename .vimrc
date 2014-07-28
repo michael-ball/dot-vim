@@ -82,7 +82,7 @@ let tern_show_signature_in_pum = 1
 let g:easytags_cmd = '/usr/bin/ctags'
 let g:easytags_languages = {
             \   'javascript': {
-            \     'cmd': '/usr/bin/jsctags',
+            \     'cmd': '/usr/local/bin/jsctags',
             \       'args': [],
             \       'fileoutput_opt': '-f',
             \       'stdout_opt': '-f-',
