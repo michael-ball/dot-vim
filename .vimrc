@@ -69,11 +69,11 @@ let g:miniBufExplorerAutoStart = 0
 map <silent> <F11>
 \    :call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")<CR>
 
-let g:gitgutter_sign_added = '█'
-let g:gitgutter_sign_modified = '█'
-let g:gitgutter_sign_removed = '█'
-let g:gitgutter_sign_modified_removed = '█'
-let g:gitgutter_realtime = 0
+"let g:gitgutter_sign_added = '█'
+"let g:gitgutter_sign_modified = '█'
+"let g:gitgutter_sign_removed = '█'
+"let g:gitgutter_sign_modified_removed = '█'
+"let g:gitgutter_realtime = 0
 "let g:gitgutter_enabled = 0
 let g:gitgutter_diff_args = '-w --ignore-blank-lines'
 let g:tern_map_keys=1
