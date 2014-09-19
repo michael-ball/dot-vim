@@ -46,7 +46,7 @@ set omnifunc=syntaxcomplete#Complete
 let g:SuperTabDefaultCompletionType = "context"
 set completeopt+=menuone,preview
 
-let g:tagbar_phpctags_bin='~/bin/phpctags'
+let g:tagbar_phpctags_bin='phpctags'
 let g:tagbar_phpctags_memory_limit = '512M'
 
 let g:syntastic_error_symbol='✗'
@@ -89,7 +89,7 @@ let g:easytags_languages = {
             \       'stdout_opt': '-f-',
             \   },
             \   'php': {
-            \     'cmd': '~/bin/phpctags',
+            \     'cmd': 'phpctags',
             \       'args': ['--memory=512M'],
             \       'fileoutput_opt': '-f',
             \       'stdout_opt': '-f-',
