@@ -82,6 +82,3 @@
 [submodule ".vim/bundle/Align.git"]
 	path = .vim/bundle/Align.git
 	url = git@github.com:vim-scripts/Align.git
-[submodule ".vim/bundle/gtags"]
-	path = .vim/bundle/gtags
-	url = git@github.com:vim-scripts/gtags.vim.git
