@@ -36,7 +36,7 @@ set background=dark
 colors base16-default 
 set guioptions+=mTLlRr
 set guioptions-=mTLlRr
-set guifont=InputMonoNarrow\ for\ Powerline\ 9
+set guifont=Input\ Mono\ Narrow\ 9
 
 nmap <C-V> "+gP
 imap <C-V> <ESC><C-V>i
@@ -121,3 +121,9 @@ let g:ctrlp_buftag_typess = {
             \   }
             \}
 inoremap {<CR> {<CR>}<C-o>O 
+
+set csprg=gtags-cscope
+cs add GTAGS
+let g:Gtags_Auto_Update = 1
+" Map Ctrl + r to gtags reference search
+nmap <C-r> :Gtags -r<CR><CR>
