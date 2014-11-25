@@ -24,7 +24,7 @@ set nowrap
 set sw=4
 set smarttab
 set tags=./tags;,tags
-set smartindent
+set cindent
 filetype plugin indent on
 set encoding=utf-8
 
