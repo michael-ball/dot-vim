@@ -9,9 +9,15 @@ set incsearch
 set backspace=indent,eol,start
 filetype on
 filetype plugin on
-filetype plugin indent on
-set encoding=utf-8
 
+" Only do this part when compiled with support for autocommands.
+if has("autocmd")
+    " Use filetype detection and file-based automatic indenting.
+    filetype plugin indent on
+
+    " Use actual tab chars in Makefiles.
+    autocmd FileType make set tabstop=8 shiftwidth=8 softtabstop=0 noexpandtab
+endif
 set et
 set cc=80
 set nowrap
@@ -19,6 +25,8 @@ set sw=4
 set smarttab
 set tags=./tags;,tags
 set smartindent
+filetype plugin indent on
+set encoding=utf-8
 
 set completeopt=longest,menuone
 
@@ -26,10 +34,10 @@ set sessionoptions+=resize
 
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
-  \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+            \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 
 inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
-  \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+            \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 
 let base16colorspace=256
 set background=dark
@@ -67,7 +75,7 @@ let g:airline_section_z = '%3p%%'
 let g:miniBufExplorerAutoStart = 0
 
 map <silent> <F11>
-\    :call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")<CR>
+            \    :call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")<CR>
 
 let g:gitgutter_sign_added = '█'
 let g:gitgutter_sign_modified = '█'
