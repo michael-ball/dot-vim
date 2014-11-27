@@ -82,3 +82,9 @@
 [submodule ".vim/bundle/Align.git"]
 	path = .vim/bundle/Align.git
 	url = git@github.com:vim-scripts/Align.git
+[submodule ".vim/bundle/jellybeans.vim"]
+	path = .vim/bundle/jellybeans.vim
+	url = git@github.com:nanotech/jellybeans.vim.git
+[submodule ".vim/bundle/vim-gotham"]
+	path = .vim/bundle/vim-gotham
+	url = git@github.com:whatyouhide/vim-gotham.git
