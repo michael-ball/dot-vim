@@ -30,6 +30,7 @@ set encoding=utf-8
 set completeopt=longest,menuone
 
 set sessionoptions+=resize
+set sessionoptions-=options
 
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
@@ -37,8 +38,9 @@ inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
 
 inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
             \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
-
-let base16colorspace=256
+if !has("gui_running")
+    let base16colorspace=256
+endif
 set background=dark
 colors base16-default 
 set guioptions+=mTLlRr
