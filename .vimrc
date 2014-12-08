@@ -42,7 +42,7 @@ if !has("gui_running")
     let base16colorspace=256
 endif
 set background=dark
-colors base16-default 
+colors base16-eighties
 set guioptions+=mTLlRr
 set guioptions-=mTLlRr
 set guifont=Input\ Mono\ Narrow\ 9
