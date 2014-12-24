@@ -137,3 +137,17 @@ cs add GTAGS
 let g:Gtags_Auto_Update = 1
 " Map Ctrl + r to gtags reference search
 nmap <C-r> :Gtags -r<CR><CR>
+
+if has ("cscope")
+    set cscopetag
+
+    set csto=0
+
+    if filereadable("cscope.out")
+        cs add cscope.out
+    elseif $CSCOPE_DB != ""
+        cs add $CSCOPE_DB
+    endif
+
+    set cscopeverbose
+endif
