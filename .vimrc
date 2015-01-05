@@ -45,7 +45,7 @@ set background=dark
 colors base16-eighties
 set guioptions+=mTLlRr
 set guioptions-=mTLlRr
-set guifont=Input\ Mono\ Narrow\ 9
+set guifont=Input\ Mono\ Condensed\ 8
 
 nmap <C-V> "+gP
 imap <C-V> <ESC><C-V>i
