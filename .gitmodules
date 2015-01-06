@@ -88,3 +88,6 @@
 [submodule ".vim/bundle/vim-gotham"]
 	path = .vim/bundle/vim-gotham
 	url = git@github.com:whatyouhide/vim-gotham.git
+[submodule ".vim/bundle/cscope.vim"]
+	path = .vim/bundle/cscope.vim
+	url = git@github.com:brookhong/cscope.vim.git
