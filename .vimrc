@@ -46,6 +46,7 @@ colors base16-eighties
 set guioptions+=mTLlRr
 set guioptions-=mTLlRr
 set guifont=Input\ Mono\ Compressed\ 8
+let g:airline_theme='base16'
 
 nmap <C-V> "+gP
 imap <C-V> <ESC><C-V>i
