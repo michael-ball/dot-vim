@@ -152,3 +152,5 @@ if has ("cscope")
 
     set cscopeverbose
 endif
+
+noremap <F3> :Autoformat<CR>
