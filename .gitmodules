@@ -54,16 +54,13 @@
 	url = https://github.com/chriskempson/base16-vim.git
 [submodule ".vim/bundle/vim-session"]
 	path = .vim/bundle/vim-session
-	url = git@github.com:xolox/vim-session.git
+	url = https://github.com/xolox/vim-session.git
 [submodule ".vim/bundle/Align"]
 	path = .vim/bundle/Align
-	url = git@github.com:vim-scripts/Align.git
-[submodule ".vim/bundle/vim-hybrid"]
-	path = .vim/bundle/vim-hybrid
-	url = git@github.com:w0ng/vim-hybrid.git
+	url = https://github.com/vim-scripts/Align.git
 [submodule ".vim/bundle/vim-snipmate"]
 	path = .vim/bundle/vim-snipmate
-	url = git@github.com:garbas/vim-snipmate.git
+	url = https://github.com/garbas/vim-snipmate.git
 [submodule ".vim/bundle/tlib_vim"]
 	path = .vim/bundle/tlib_vim
 	url = https://github.com/tomtom/tlib_vim.git
@@ -75,22 +72,16 @@
 	url = https://github.com/honza/vim-snippets.git
 [submodule ".vim/bundle/grunt.vim"]
 	path = .vim/bundle/grunt.vim
-	url = git@github.com:mklabs/grunt.vim.git
+	url = https://github.com/mklabs/grunt.vim.git
 [submodule ".vim/bundle/delimitMate.git"]
 	path = .vim/bundle/delimitMate.git
-	url = git@github.com:Raimondi/delimitMate.git
+	url = https://github.com/Raimondi/delimitMate.git
 [submodule ".vim/bundle/Align.git"]
 	path = .vim/bundle/Align.git
-	url = git@github.com:vim-scripts/Align.git
-[submodule ".vim/bundle/jellybeans.vim"]
-	path = .vim/bundle/jellybeans.vim
-	url = git@github.com:nanotech/jellybeans.vim.git
-[submodule ".vim/bundle/vim-gotham"]
-	path = .vim/bundle/vim-gotham
-	url = git@github.com:whatyouhide/vim-gotham.git
+	url = https://github.com/vim-scripts/Align.git
 [submodule ".vim/bundle/cscope.vim"]
 	path = .vim/bundle/cscope.vim
-	url = git@github.com:brookhong/cscope.vim.git
+	url = https://github.com/brookhong/cscope.vim.git
 [submodule ".vim/bundle/vim-airline-themes"]
 	path = .vim/bundle/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes.git
