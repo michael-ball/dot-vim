@@ -9,6 +9,7 @@ set incsearch
 set backspace=indent,eol,start
 filetype on
 filetype plugin on
+set laststatus=2
 
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
@@ -19,7 +20,7 @@ if has("autocmd")
     autocmd FileType make set tabstop=8 shiftwidth=8 softtabstop=0 noexpandtab
 endif
 set et
-set cc=80
+set cc=81
 set nowrap
 set sw=4
 set smarttab
@@ -42,10 +43,10 @@ if !has("gui_running")
     let base16colorspace=256
 endif
 set background=dark
-colors base16-eighties
+colors base16-default-dark
 set guioptions+=mTLlRr
 set guioptions-=mTLlRr
-set guifont=Input\ Mono\ Compressed\ 8
+set guifont=InputMonoCondensed\ Nerd\ Font\ 8
 let g:airline_theme='base16'
 
 nmap <C-V> "+gP
@@ -54,7 +55,7 @@ vmap <C-C> "+y
 
 set omnifunc=syntaxcomplete#Complete
 let g:SuperTabDefaultCompletionType = "context"
-set completeopt+=menuone,preview
+set completeopt+=preview
 
 let g:tagbar_phpctags_bin='phpctags'
 let g:tagbar_phpctags_memory_limit = '512M'
@@ -68,12 +69,22 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_aggregate_errors = 1
 let g:syntastic_php_checkers=['php', 'phpcs -n']
+let g:syntastic_python_checkers=['flake8', 'pydocstyle']
 let g:syntastic_javascript_checkers=['jshint']
 
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+let g:airline_symbols.space = "\ua0"
 let g:airline_powerline_fonts = 1
+let g:airline_skip_empty_sections = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
-let g:airline_section_z = '%3p%%'
+let g:airline#extensions#whitespace#enabled = 0 " turn off the whitespace extension"
+let g:airline#extensions#tmuxline#enabled = 0 " turn off the tmuxline extension"
+call airline#parts#define_raw('linenr', '%l')
+call airline#parts#define_accent('linenr', 'bold')
+let g:airline_section_z = airline#section#create(['%3p%% ', ' ', 'linenr', ':%c '])
 
 let g:miniBufExplorerAutoStart = 0
 
@@ -109,6 +120,7 @@ let g:easytags_languages = {
             \}
 
 let g:easytags_dynamic_files = 1
+let g:easytags_async = 1
 let g:easytags_updatetime_warn = 0
 let g:easytags_events = ['BufWritePost']
 
