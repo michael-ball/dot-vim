@@ -166,3 +166,10 @@ if has ("cscope")
 endif
 
 noremap <F3> :Autoformat<CR>
+
+" NERDTree toggle
+map <F8> :NERDTreeToggle<CR>
+
+" Vimux key mappings
+map <Leader>vp :VimuxPromptCommand<CR>
+map <Leader>vc :VimuxCloseRunner<CR>
