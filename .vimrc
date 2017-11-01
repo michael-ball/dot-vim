@@ -169,6 +169,10 @@ noremap <F3> :Autoformat<CR>
 
 " NERDTree toggle
 map <F8> :NERDTreeToggle<CR>
+" Tagbar toggle
+map <F9> :TagbarToggle<CR>
+
+let g:VimuxUseNearest = 0
 
 " Vimux key mappings
 map <Leader>vp :VimuxPromptCommand<CR>
